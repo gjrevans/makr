@@ -1,0 +1,54 @@
+<div class="jumbotron">
+	<div class="container">
+		<div class="content">
+			<h1>Bring your idea to life</h1>
+			<p>Share your idea with the community to begin a conversaiton</p>
+		</div>
+	</div>
+	<div class="top"></div>
+</div>
+<div class="container" id="about">
+	<div class="container">
+		<div class="info col-md-8">
+			<h1>Community Based Startups</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique condimentum pellentesque. Aliquam consequat condimentum maximus. Donec interdum tortor vitae justo tristique, sed eleifend tellus volutpat. Nullam vestibulum aliquam urna. Donec ornare iaculis enim. Sed rutrum ante ut purus varius facilisis. Vestibulum suscipit ante vitae mauris laoreet egestas.</p>
+		</div>
+	</div>
+</div>
+<div class="container" id="posts">
+	<p id="intro">Popular Projects<br/><span>Popular projects within the Makr Community</span></p>
+	<div class="row">
+		<% @posts.each do |post| %>
+		<div class="col-md-4 post">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="post_image">
+					<%= link_to (image_tag post.image.url(:medium)), post %>
+					</div>
+					<div class="post_content">
+						<div class="title">
+							<h2><%= link_to post.title, post %></h2>
+						</div>
+						<div class="data">
+							<p class="username">Posted by <%= post.user.name %></p>
+							<p class="buttons">
+								<span>
+									<i class="fa fa-comments-o"></i>
+									<%= post.comments.count %>
+								</span>
+								<span>
+									<i class="fa fa-thumbs-o-up"></i>
+									<%= post.get_likes.size %>
+								</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<% end %>
+	</div>
+	<div class="row">
+		<%= render "layouts/pagination" %>
+	</div>
+</div>

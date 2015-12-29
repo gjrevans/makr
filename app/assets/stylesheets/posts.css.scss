@@ -1,0 +1,129 @@
+#post_show {
+	.post_data {
+		.button {
+			width: 100%;
+			display: inline-block;
+			padding: .75em 0;
+			margin-bottom: 1em;
+			text-align: center;
+			text-decoration: none;
+			color: #969696;
+			&:hover {
+				color: #50A7C7;
+				border: 1px solid #50A7C7;
+			}
+		}
+		.data {
+			width: 100%;
+			display: block;
+			padding: .75em 0;
+			border-bottom: 1px solid #E9E9E9;
+			text-decoration: none;
+			color: #969696;
+			margin: 0;
+		}
+	}
+	#random_post {
+		h3 {
+			font-size: 1em;
+		}
+		.post {
+			background: #F8F9FA;
+			border: 1px solid #E4E4E4;
+			border-radius: 0.3em;
+			.post_image {
+				height: 200px;
+				overflow: hidden;
+				img {
+					width: 100%;
+					border-radius: .3em .3em 0 0;
+				}
+			}
+			.post_content {
+				h2 {
+					margin: 0;
+					font-weight: 100;
+					padding: 1rem 5%;
+					border-bottom: 1px solid #E4E4E4;
+					font-size: 1.25em;
+					a {
+						text-decoration: none;
+						color: #333233;
+						&:hover {
+							color: #50A7C7;
+						}
+					}
+				}
+				.data {
+					padding: .75em 5%;
+					color: #969696;
+					.username, .buttons {
+						margin: 0;
+						font-size: .8em;
+					}
+					.username {
+						float: left;
+					}
+					.buttons {
+						float: right;
+						span {
+							margin-left: .5em;
+						}
+					}
+				}
+			}
+		}
+	}
+	h1 {
+		margin: 0;
+		color: #333233;
+	}
+	img {
+		width: 100%;
+		border-radius: .3em;
+	}
+	.username {
+		color: #969696;
+		margin: 0 0 1.5em 0;
+	}
+	.description {
+		margin: 2em 0;
+		font-size: 1.1em;
+		line-height: 1.5;
+		color: #969696;
+	}
+}
+
+#comments {
+	padding-bottom: 4em;
+	.comment_count {
+		border-bottom: 1px solid #E9E9E9;
+		padding-bottom: .5em;
+		margin-bottom: 0;
+	}
+	.comment {
+		padding: 2em 0;
+		border-bottom: 1px solid #E9E9E9;
+		padding-left: 5%;
+		.username {
+			font-size: 1.3em;
+			color: #333233;
+			margin: 0 0 .5em 0;
+		}
+		.content {
+			margin: 0;
+			color: #969696;
+		}
+	}
+	.comment_content {
+		margin-top: 2.5em;
+		textarea {
+			width: 100%;
+			margin: 1em 0;
+			min-height: 150px;
+			border: 1px solid #E4E4E4;
+			background: #F8F9FA;
+			border-radius: 0.3em;
+		}
+	}
+}

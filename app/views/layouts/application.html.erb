@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Makr Network</title>
+	<%= stylesheet_link_tag    'application', media: 'all' %>
+	<%= javascript_include_tag 'application' %>
+	<%= csrf_meta_tags %>
+	<meta name="viewport" content="initial-scale=1">
+	<link rel="stylesheet" "href"="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+	<link rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<%= render "layouts/navigation" %>
+
+	<% if flash.present? %>
+		<div class="container">
+			<% flash.each do |name, msg| %>
+				<%= content_tag :div, class: "alert alert-info" do %>
+				    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				    <%= msg %>
+				<% end %>
+			<% end %>
+		</div>
+	<% end %>
+
+	<% if current_page?(root_path) || current_page?(posts_path) %>
+		<%= yield %>
+	<% else %>
+		<div class="container mtl">
+			<%= yield %>
+		</div>
+	<% end %>
+</body>
+</html>

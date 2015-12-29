@@ -1,0 +1,101 @@
+.jumbotron {
+	width: 100%;
+	min-height: 500px;
+	padding: 0;
+	margin-bottom: 0;
+	background: url(header.jpg) no-repeat center center;
+	background-color: #333233;
+	color: #ffffff;
+	.top {
+		display: block;
+		height: 0;
+	    border-width: 0 100vw 200px 0;
+	    border-style: solid;
+	    border-color: transparent transparent #50A7C7 transparent;
+	}
+	.content {
+		text-align: center;
+		padding: 18em 0 6em 0;
+		text-shadow: 0 1px 1px rgba(0,0,0,.3);
+		h1 {
+			margin: 0;
+		}
+		p {
+			font-weight: 300;
+			font-size: 2em;
+		}
+	}
+}
+
+#about {
+	color: #fff;
+	background-color: #50A7C7;
+	margin: 0;
+	width: 100%;
+	line-height: 2em;
+	.info {
+		margin: -20px 0 90px 0;
+	}
+}
+
+#posts {
+	#intro {
+		margin: 2.5em 0 2em 0;
+		text-align: center;
+		font-size: 1.75em;
+		line-height: 1;
+		span {
+			font-size: 0.7em;
+			color: #9B9B9B;
+		}
+	}
+	.panel {
+		.panel-body {
+			background-color: #f6f6f6;
+			padding: 0px;
+		}
+	}
+	.post {
+		.post_image {
+			height: 200px;
+			overflow: hidden;
+			img {
+				width: 100%;
+				border-radius: .3em .3em 0 0;
+			}
+		}
+		.post_content {
+			padding: 15px 15px 35px 15px;
+			h2 {
+				line-height: 2;
+				font-weight: 100;
+				border-bottom: 1px solid #E4E4E4;
+				font-size: 1.25em;
+				a {
+					margin: 10px 0;
+					text-decoration: none;
+					color: #333233;
+					&:hover {
+						color: #50A7C7;
+					}
+				}
+			}
+			.data {
+				color: #969696;
+				.username, .buttons {
+					margin: 0;
+					font-size: 0.9em;
+				}
+				.username {
+					float: left;
+				}
+				.buttons {
+					float: right;
+					span {
+						margin-left: .5em;
+					}
+				}
+			}
+		}
+	}
+}
