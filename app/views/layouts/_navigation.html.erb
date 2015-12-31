@@ -12,7 +12,9 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <%= render "layouts/search" %>
+      <% unless current_page?(root_path) || current_page?(posts_path)%>
+        <%= render "layouts/search" %>
+      <% end %>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Share an Idea", new_post_path, class: "btn navbar-btn button", type: "button" %></li>
         <% if user_signed_in? %>

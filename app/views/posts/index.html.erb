@@ -4,14 +4,42 @@
 			<h1>Bring your idea to life</h1>
 			<p>Share your idea with the community to begin a conversaiton</p>
 		</div>
+		<div class="search col-md-12">
+			<%= form_tag search_posts_path, method: 'get', role: "search" do %>
+				<div class="form-group form col-md-offset-2 col-md-7 col-xs-9">
+		    		<%= text_field_tag :search, params[:search], class: "form-control" %>
+		    	</div>
+		    	<div class="col-md-1 col-xs-1 btn-search">
+		    	<%= button_tag(class: "btn btn-default button") do %>
+		    		<i class="fa fa-search"></i>
+		    	<% end %>
+		    	</div>
+			<% end %>
+		</div>
 	</div>
 	<div class="top"></div>
 </div>
 <div class="container" id="about">
-	<div class="container">
-		<div class="info col-md-8">
-			<h1>Community Based Startups</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique condimentum pellentesque. Aliquam consequat condimentum maximus. Donec interdum tortor vitae justo tristique, sed eleifend tellus volutpat. Nullam vestibulum aliquam urna. Donec ornare iaculis enim. Sed rutrum ante ut purus varius facilisis. Vestibulum suscipit ante vitae mauris laoreet egestas.</p>
+	<div class="container icons">
+		<div class="row">
+			<div class="col-md-1 col-xs-3 icon">
+				<i class="fa fa-comments"></i>
+			</div>
+			<div class="col-md-1 col-xs-3 icon">
+				<i class="fa fa-group"></i>
+			</div>
+			<div class="col-md-1 col-xs-3 icon">
+				<i class="fa fa-thumbs-up"></i>
+			</div>
+			<div class="col-md-1 col-xs-3">
+				<i class="fa fa-rocket"></i>
+			</div>
+		</div>
+		<div class="row">
+			<div class="info col-md-8">
+				<h1>Community Based Startups</h1>
+				<p>Finding talented team members is tough, but at Makr we belive it doesn't have to be. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique condimentum pellentesque. Aliquam consequat condimentum maximus. Donec interdum tortor vitae justo tristique, sed eleifend tellus volutpat. Nullam vestibulum aliquam urna. Donec ornare iaculis enim. Sed rutrum ante ut purus varius facilisis. Vestibulum suscipit ante vitae mauris laoreet egestas.</p>
+			</div>
 		</div>
 	</div>
 </div>

@@ -1,9 +1,10 @@
+<div id="posts">
 <p id="intro">Search Result
 <br/>
 	<span>We found <%= pluralize(@posts.length, "Makr project") %></span>
 </p>
 
-<div id="posts" class="row">
+<div class="row">
 	<% @posts.each do |post| %>
 	<div class="col-md-4 post">
 		<div class="panel panel-default">

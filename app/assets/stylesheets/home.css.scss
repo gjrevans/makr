@@ -15,7 +15,7 @@
 	}
 	.content {
 		text-align: center;
-		padding: 18em 0 6em 0;
+		padding: 14em 0 1em 0;
 		text-shadow: 0 1px 1px rgba(0,0,0,.3);
 		h1 {
 			margin: 0;
@@ -23,6 +23,27 @@
 		p {
 			font-weight: 300;
 			font-size: 2em;
+		}
+	}
+	.search {
+		margin-bottom: 4em;
+		form {
+			.form {
+				background:none;
+				margin-right: 0.2em;
+				padding-right: 0em;
+			}
+			input {
+				height: 50px;
+			}
+			.btn-search {
+				margin-left: 0em;
+				padding-left: 0em;
+				button {
+					height: 50px;
+					width: 50px;
+				}
+			}
 		}
 	}
 }
@@ -34,13 +55,21 @@
 	width: 100%;
 	line-height: 2em;
 	.info {
-		margin: -20px 0 90px 0;
+		margin: 0 0 5em 0;
+	}
+	.icons {
+		.icon {
+			margin-right: 1.5em; 
+		}
+		i {
+			font-size: 4em;
+		}
 	}
 }
 
 #posts {
 	#intro {
-		margin: 2.5em 0 2em 0;
+		margin: 1.5em 0 2em 0;
 		text-align: center;
 		font-size: 1.75em;
 		line-height: 1;
@@ -99,3 +128,27 @@
 		}
 	}
 }
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+	#about {
+		.icons {
+			.icon {
+				margin-right: 0em; 
+			}
+			i {
+				font-size: 3em;
+			}
+		}
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {}
