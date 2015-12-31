@@ -14,5 +14,8 @@ Rails.application.routes.draw do
   	resources :comments
   end
 
+  get 'profiles/:id' => 'profiles#show'
+
+
   root 'posts#index'
 end
