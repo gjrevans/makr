@@ -5,6 +5,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import 'posts.scss';
+@import 'profiles.scss';
 @import 'helper.scss';
 @import 'home.scss';
 @import url(//fonts.googleapis.com/css?family=Open+Sans:300,400,600);
@@ -180,6 +181,11 @@ nav {
 			i {
 				font-size: 3em;
 			}
+		}
+	}
+	#profile_show {
+		.user_info {
+			padding-right: 0px;
 		}
 	}
 }

@@ -1,0 +1,31 @@
+<% @posts.each do |post| %>
+<div class="row" id="post_small">
+  <!-- Random Post -->
+  <div >
+    <div class="post">
+      <div class="post_image">
+        <%= link_to (image_tag post.image.url(:medium)), post_path(post) %>
+      </div>
+      <div class="post_content">
+        <div class="title">
+          <h2><%= link_to post.title, post_path(post)%></h2>
+        </div>
+
+        <div class="data clearfix">
+          <p class="username">Shared by <%= post.user.name %></p>
+          <p class="buttons">
+            <span>
+              <i class="fa fa-comments-o"></i>
+              <%= post.comments.count %>
+            </span>
+            <span>
+              <i class="fa fa-thumbs-o-up"></i>
+              <%= post.get_likes.size %>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

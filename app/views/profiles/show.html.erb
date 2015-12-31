@@ -1,6 +1,21 @@
-<%= @user.name %>
-<%= @user.email %>
-<%= @user.email %>
-Last active <%= time_ago_in_words(@user.last_sign_in_at) %>
-
-<User id: 1, email: "gjrevans@gmail.com", encrypted_password: "$2a$10$PhWrCTOtU5jYrodrXIo.i.mqaLGZlU39KjjWIlEmg4y...", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2015-12-31 05:11:03", last_sign_in_at: "2015-12-31 05:11:03", current_sign_in_ip: "::1", last_sign_in_ip: "::1", created_at: "2015-12-31 05:11:03", updated_at: "2015-12-31 05:11:03", name: "Gordon">
+<div id="profile_show">
+	<div class="col-md-9 user_info">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="col-md-3 col-sm-3 col-xs-4">
+					<div style="background-color:#50A7C7;height:120px;width:120px;border: 1px solid #9B9B9B;border-radius:4px;padding:10px;"></div>
+				</div>
+				<div class="col-md-9 col-sm-9 col-xs-8">
+					<h3><%= @user.name %> <%= @user.last_name %></h3>
+					<p class="last_active">Last active <%= time_ago_in_words(@user.last_sign_in_at) %></p>
+					<p><%= mail_to "#{@user.email}", @user.email %></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-3">
+		<div id="post_show">
+			<%= render 'layouts/post' %>
+		</div>
+	</div>
+</div>
