@@ -26,6 +26,7 @@ h1, h2, h3, h4, h5, h6 {
 	top: 100px;
 	width: 80%;
 }
+
 .button {
 	border: 1px solid #9B9B9B;
 	padding: .7em 1.25em;
@@ -46,6 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: #9B9B9B;
 }
 
+/*-------- navigation ------------*/
 .navbar-nav > li > a {
 	padding: .7em 1.25em;
 	margin-right: 0.3em;
@@ -64,8 +66,9 @@ nav {
 		border: 1px solid #9B9B9B;
 	}
 	#logo {
-		font-size: 1.75em;
 		padding: 0.8em;
+		width: 170px;
+		margin-top: -0.8em;
 		a {
 			color: #333233;
 			text-decoration: none;
@@ -125,3 +128,61 @@ nav {
   		}
   	}
 }
+
+/*----------- responsive --------------*/
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+		nav {
+		#logo {
+			padding: 0.6em;
+			width: 140px;
+			margin-top: -0.5em;
+		}
+	}
+	.jumbotron {
+		.content {
+			h1 {
+				font-size: 40px;
+				margin: 0;
+			}
+			p {
+				font-weight: 300;
+				font-size: 1.5em;
+			}
+		}
+	.search {
+		margin-bottom: 8em;
+		}
+	}
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+	.jumbotron {
+		.top {
+	    	border-width: 0 100vw 100px 0;
+	    	overflow: hidden;
+	    }
+	    .search {
+			margin-bottom: 8.5em;
+		}
+	}
+	#about {
+		.icons {
+			margin-top: 3em;
+			.icon {
+				margin-right: 0em; 
+			}
+			i {
+				font-size: 3em;
+			}
+		}
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {}
