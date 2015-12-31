@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-6">
       <h1><%= @post.title %></h1>
-      <p class="username">Shared by <%= @post.user.name %> about <%= time_ago_in_words(@post.created_at) %></p>
+      <p class="username"><%= @post.user.name %> shared an <%= @post.kind.humanize %> about <%= time_ago_in_words(@post.created_at) %></p>
     </div>
     <div class="col-md-offset-3 col-md-3 hidden-xs hidden-sm">
       <h3>Related Projects</h3>
@@ -30,7 +30,7 @@
         <p class="data"><i class="fa fa-comments-o"></i> <%= pluralize(@post.comments.count, "Comment")%></p>
         <% if @post.user == current_user %>
           <%= link_to edit_post_path(@post), class: "data" do %>
-            <i class="fa fa-trash-o" %></i>
+            <i class="fa fa-pencil-square-o" %></i>
             Edit
           <% end %>
           <%= link_to post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: "data" do %>

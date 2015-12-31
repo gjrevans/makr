@@ -21,6 +21,7 @@ class PostsController < ApplicationController
 
 	def new
 		@post = current_user.posts.build
+		@kinds = Post.kinds
 	end
 
 	def create
@@ -34,6 +35,7 @@ class PostsController < ApplicationController
 	end
 
 	def edit
+		@kinds = Post.kinds
 	end
 
 	def update
@@ -66,6 +68,6 @@ class PostsController < ApplicationController
 	end
 
 	def post_params
-		params.require(:post).permit(:title, :link, :description, :image)
+		params.require(:post).permit(:title, :link, :description, :image, :kind)
 	end
 end

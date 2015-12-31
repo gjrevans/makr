@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151231023726) do
+ActiveRecord::Schema.define(version: 20151226011123) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "content"
@@ -28,8 +28,9 @@ ActiveRecord::Schema.define(version: 20151231023726) do
     t.string   "title"
     t.string   "link"
     t.text     "description"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.integer  "kind",               default: 0
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.integer  "user_id"
     t.string   "image_file_name"
     t.string   "image_content_type"

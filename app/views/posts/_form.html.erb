@@ -1,7 +1,9 @@
-<%= simple_form_for(@post, html: { class: 'form-horizontal' }) do |f| %>
-	<%= f.input :image %>
-	<%= f.input :title %>
-	<%= f.input :link %>
+<%= simple_form_for(@post, html: { class: '' }) do |f| %>
+	<%= f.input :image, class: "form-control" %>
+	<%= f.input :title, class: "form-control" %>
+	<%= f.input :link, class: "form-control" %>
 	<%= f.input :description %>
+	<%= f.select :kind, options_for_select(@kinds.collect { |s| [s[0].humanize, s[0]] }, selected: @post.kind), {} , class: "form-control" %>
+	<br />
 	<%= f.button :submit %>
 <% end %>

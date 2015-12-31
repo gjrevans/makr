@@ -1,3 +1,5 @@
+/* ------- jumbotron -------- */
+
 .jumbotron {
 	width: 100%;
 	min-height: 500px;
@@ -28,6 +30,7 @@
 			}
 			input {
 				height: 50px;
+				border: 1px solid #9B9B9B;
 			}
 			.btn-search {
 				margin-left: 0em;
@@ -48,6 +51,8 @@
 	}
 }
 
+/* ------- about makr -------- */
+
 #about {
 	color: #fff;
 	background-color: #50A7C7;
@@ -67,6 +72,8 @@
 		}
 	}
 }
+
+/* ------- posts -------- */
 
 #posts {
 	#intro {
