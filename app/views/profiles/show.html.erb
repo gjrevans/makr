@@ -7,7 +7,13 @@
 		</div>
 		<div class="row user_info">
 			<h3><%= @user.name %> <%= @user.last_name %></h3>
-			<p class="last_active">Last active <%= time_ago_in_words(@user.last_sign_in_at) %></p>
+			<p class="last_active">Last active <%= time_ago_in_words(@user.last_sign_in_at) %>
+				<% if user_signed_in? %>
+					<% if current_user.id == params[:id].to_i %> 
+						 | <%= link_to "Edit Profile", edit_user_registration_path %> 
+					<% end %>
+				<% end %>
+			</p>
 			<%= mail_to @user.email do %>
 				<button class="btn btn-default">Send me an email</button>
 			<% end %>

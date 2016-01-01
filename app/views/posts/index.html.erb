@@ -58,7 +58,7 @@
 							<h2><%= link_to post.title, post %></h2>
 						</div>
 						<div class="data">
-							<p class="username">Posted by <%= post.user.name %></p>
+							<p class="username">Posted by <%= link_to "#{post.user.name}", profile_path(post.user.id) %></p>
 							<p class="buttons">
 								<span>
 									<i class="fa fa-comments-o"></i>
