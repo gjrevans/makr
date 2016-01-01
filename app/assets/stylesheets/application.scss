@@ -150,7 +150,11 @@ nav {
 
 /* Small devices (tablets, 768px and up) */
 @media (max-width: 768px) {
-		nav {
+	.navbar-nav > li > a {
+		margin-left: 1.5em;
+		margin-right: 1.5em;
+	}
+	nav {
 		#logo {
 			padding: 0.6em;
 			width: 140px;
