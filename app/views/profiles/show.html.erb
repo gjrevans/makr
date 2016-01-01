@@ -1,19 +1,28 @@
 <div id="profile_show">
-	<div class="col-md-9 user_info">
-		<div class="panel panel-default">
-			<div class="panel-body">
-				<div class="col-md-3 col-sm-3 col-xs-4">
-					<div style="background-color:#50A7C7;height:120px;width:120px;border: 1px solid #9B9B9B;border-radius:4px;padding:10px;"></div>
-				</div>
-				<div class="col-md-9 col-sm-9 col-xs-8">
-					<h3><%= @user.name %> <%= @user.last_name %></h3>
-					<p class="last_active">Last active <%= time_ago_in_words(@user.last_sign_in_at) %></p>
-					<p><%= mail_to "#{@user.email}", @user.email %></p>
-				</div>
+	<div class="col-md-9 ">
+		<div class="row">
+			<div id="user_image">
+				<%= image_tag "avatar.jpg" %>
+			</div>
+		</div>
+		<div class="row user_info">
+			<h3><%= @user.name %> <%= @user.last_name %></h3>
+			<p class="last_active">Last active <%= time_ago_in_words(@user.last_sign_in_at) %></p>
+			<%= mail_to @user.email do %>
+				<button class="btn btn-default">Send me an email</button>
+			<% end %>
+		</div>
+		<div class="row user_details">
+			<h3>About Me</h3>
+			<div class="description">
+				<p><%= @user.description %></p>
 			</div>
 		</div>
 	</div>
 	<div class="col-md-3">
+		<div class="row">
+			<h3><%= @user.name %>'s Projects</h3>
+		</div>
 		<div id="post_show">
 			<%= render 'layouts/post' %>
 		</div>

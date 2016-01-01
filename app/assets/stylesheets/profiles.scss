@@ -1,13 +1,28 @@
 #profile_show {
+	#user_image {
+		height: 10em;
+		width: 10em;
+		margin-top: 48px;
+		//background-color: #50A7C7;
+		border: 1px solid #9B9B9B;
+		border-radius: .3em;
+		img {
+			margin: 0.8em;
+			width: 8.2em;
+		}
+	}
+	h3 {
+		margin-top: 0.5em;
+	}
+	.last_active {
+		font-size: 0.8em;
+		margin-top: -1em;
+	}
 	.user_info {
-		padding-left: 0px;
-		h3 {
-			margin-top: 0.5em;
-			margin-bottom: 0em;
-		}
-		.last_active {
-			font-size: 12px;
-			margin-top: 0px;
-		}
+		margin-bottom: 3em;
+	}
+	.user_details {
+		padding-right: 4em;
+		line-height: 2em;
 	}
 }
