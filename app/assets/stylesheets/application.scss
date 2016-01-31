@@ -81,8 +81,10 @@ nav {
 		border: 1px solid #9B9B9B;
 	}
 	#logo {
-		width: 200px;
-		margin-top: -0.5em;
+		margin-top: -0.8em;
+		img {
+			width: 200px;
+		}
 		a {
 			color: #333233;
 			text-decoration: none;
@@ -155,8 +157,10 @@ nav {
 	}
 	nav {
 		#logo {
-			width: 160px;
-			margin-top: -0.3em;
+			margin-top: -0.6em;
+			img {
+				width: 160px;
+			}
 		}
 	}
 	.jumbotron {
